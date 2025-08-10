@@ -1,0 +1,36 @@
+// JavaScript
+
+// Load existing horses from local storage or initialize empty array
+let horses = JSON.parse(localStorage.getItem('horses')) || [];
+
+const form = document.getElementById('horseForm');
+const list = document.getElementById('horsesList');
+
+// Function to display horses
+function displayHorses() {
+  list.innerHTML = '';
+  horses.forEach((horse, index) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>Name:</strong> ${horse.name} <br>
+                    <strong>Breed:</strong> ${horse.breed} <br>
+                    <strong>Age:</strong> ${horse.age}`;
+    list.appendChild(li);
+  });
+}
+
+// Handle form submission
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const newHorse = {
+    name: document.getElementById('name').value,
+    breed: document.getElementById('breed').value,
+    age: document.getElementById('age').value
+  };
+  horses.push(newHorse);
+  localStorage.setItem('horses', JSON.stringify(horses));
+  displayHorses();
+  form.reset();
+});
+
+// Initial display
+displayHorses();
