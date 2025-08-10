@@ -1,0 +1,117 @@
+/* Italian-inspired CSS Theme for Horse Management System */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f3e0d2, #d2b48c);
+  color: #4B3B2A;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: #8B5E3C;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: #A0522D;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #A0522D;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+form {
+  background: #fff8f0;
+  border: 2px solid #8B5E3C;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #A0522D;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #D2691E;
+  outline: none;
+  box-shadow: 0 0 8px rgba(210, 105, 30, 0.3);
+}
+
+button {
+  margin-top: 20px;
+  background-color: #8B5E3C;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #A0522D;
+  transform: translateY(-2px);
+}
+
+#horsesList {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+li {
+  background: #fff8f0;
+  border-left: 8px solid #D2691E;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #f0e6dc;
+}
+
+/* Additional styling for a more cohesive Italian theme */
+a {
+  color: #A0522D;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
